@@ -1,0 +1,52 @@
+$white: #ffffff;
+$compassSize: 200px;
+$compassZeroColor: red;
+$compassTargetColor: green;
+.compass {
+  position: relative;
+
+  .center {
+    width: 100%;
+    text-align: center;
+  }
+
+  .compass--circle {
+    background: $white;
+    border-radius: 50%;
+    width: $compassSize;
+    height: $compassSize;
+    position: relative;
+  
+    .compass--rotate {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .compass--zero {
+      height: $compassSize / 2;
+      width: 6px;
+      background: $compassZeroColor;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
+
+
+  .compass--target {
+    height: $compassSize / 2;
+    width: 4px;
+    background: $compassTargetColor;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+}

@@ -1,0 +1,10 @@
+<p *ngIf="showCompassNoSupport == true">no support for compass</p>
+<div class="compass" *ngIf="showCompassNoSupport == false">
+  <p class="black center">{{distanceToTarget | number: 2}}km</p>
+  <div class="compass--circle">
+    <div class="compass--rotate" [style.transform]="compassRotation">
+      <span class="compass--zero"></span>
+    </div>
+    <span class="compass--target"></span>
+  </div>
+</div>
