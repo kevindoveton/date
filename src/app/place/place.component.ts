@@ -28,9 +28,16 @@ export class PlaceComponent implements OnInit {
       bg: '#FF4B32'
     }
   ];
-  currentLocation = this.locations[0];
+  currentLocationIndex = 0;
+  currentLocation = this.locations[this.currentLocationIndex];
 
   constructor() { }
 
   ngOnInit() { }
+
+  nextLocation() {
+    this.currentLocationIndex++;
+    this.currentLocation = this.locations[this.currentLocationIndex];
+  }
+
 }
