@@ -32,7 +32,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".app {\n  background-color: #2B77D6;\n  height: 100%;\n  width: 100%;\n  position: relative;\n  font-family: 'Bitter', Arial, serif;\n  color: white;\n  font-weight: 100; }\n  .app .center.heading {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%); }\n    .app .center.heading h1 {\n      font-size: 50px;\n      font-weight: 100;\n      text-align: center;\n      margin: 0;\n      padding-bottom: 8px;\n      -webkit-animation-name: animateIn;\n              animation-name: animateIn;\n      -webkit-animation-duration: 1s;\n              animation-duration: 1s;\n      -webkit-animation-delay: 1s;\n              animation-delay: 1s; }\n    .app .center.heading button {\n      margin: 0;\n      padding: 8px 48px;\n      background: white;\n      border: 0; }\n  .app .dt {\n    position: absolute;\n    bottom: 20px;\n    left: 20px; }\n    .app .dt h2,\n    .app .dt h3 {\n      margin: 0;\n      font-weight: 100; }\n    .app .dt h2 {\n      font-size: 30px;\n      letter-spacing: 2px; }\n    .app .dt h3 {\n      font-size: 13px; }\n\n@-webkit-keyframes animateIn {\n  0% {\n    top: 100%;\n    opacity: 0; }\n  100% {\n    top: 0;\n    opacity: 1; } }\n\n@keyframes animateIn {\n  0% {\n    top: 100%;\n    opacity: 0; }\n  100% {\n    top: 0;\n    opacity: 1; } }\n", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
