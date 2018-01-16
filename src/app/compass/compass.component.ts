@@ -38,7 +38,6 @@ export class CompassComponent implements OnInit {
       const pos = [position.coords.latitude, position.coords.longitude];
       this.updateDistanceToTarget(pos, this.targetLocation);
     });
-
   }
 
   updateCompassDirection() {
@@ -49,8 +48,6 @@ export class CompassComponent implements OnInit {
     this.distanceToTarget = this.getDistanceFromLatLonInKm(cur[0], cur[1], target[0], target[1]);
     this.directionToTarget = 'rotate(' + this.getDirection(cur[0], cur[1], target[0], target[1]) + 'deg)';
     this.updateCompassDirection();
-    console.log(cur, target, this.directionToTarget);
-    // alert(this.getDirection(cur[0], cur[1], target[0], target[1]));
     return;
   }
 
@@ -84,7 +81,7 @@ export class CompassComponent implements OnInit {
     if (Math.abs(dLong) > Math.PI) {
       if (dLong > 0.0) {
         dLong = -(2.0 * Math.PI - dLong);
-    } else {
+      } else {
         dLong = (2.0 * Math.PI + dLong);
       }
     }

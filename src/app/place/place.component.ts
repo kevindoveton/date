@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewChild } from '@angular/core/src/metadata/di';
+import { CompassComponent } from '../compass/compass.component';
 
 @Component({
   selector: 'app-place',
   templateUrl: './place.component.html',
   styleUrls: ['./place.component.scss']
 })
+
 export class PlaceComponent implements OnInit {
+  @ViewChild(CompassComponent) compass: CompassComponent;
+
   locations = [
     {
       loc: [-34.812006, 138.491293],

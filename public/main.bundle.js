@@ -264,8 +264,6 @@ var CompassComponent = (function () {
         this.distanceToTarget = this.getDistanceFromLatLonInKm(cur[0], cur[1], target[0], target[1]);
         this.directionToTarget = 'rotate(' + this.getDirection(cur[0], cur[1], target[0], target[1]) + 'deg)';
         this.updateCompassDirection();
-        console.log(cur, target, this.directionToTarget);
-        // alert(this.getDirection(cur[0], cur[1], target[0], target[1]));
         return;
     };
     CompassComponent.prototype.getDistanceFromLatLonInKm = function (lat1, lon1, lat2, lon2) {
