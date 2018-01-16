@@ -43,24 +43,24 @@ module.exports = module.exports.toString();
 /***/ }),
 
 /***/ "../../../../../src/app/app.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Amelia // Kevin // Adventure';
     }
     AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        core_1.Component({
             selector: 'app-root',
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.scss")]
@@ -68,70 +68,62 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-
+exports.AppComponent = AppComponent;
 
 
 /***/ }),
 
 /***/ "../../../../../src/app/app.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__start_page_start_page_component__ = __webpack_require__("../../../../../src/app/start-page/start-page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__compass_compass_component__ = __webpack_require__("../../../../../src/app/compass/compass.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__breakfast_breakfast_component__ = __webpack_require__("../../../../../src/app/breakfast/breakfast.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__picking_picking_component__ = __webpack_require__("../../../../../src/app/picking/picking.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__place_place_component__ = __webpack_require__("../../../../../src/app/place/place.component.ts");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var platform_browser_1 = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
+var router_1 = __webpack_require__("../../../router/esm5/router.js");
 // import { RoutesRoutingModule } from './routes/routes-routing.module';
-
-
-
-
-
-
+var app_component_1 = __webpack_require__("../../../../../src/app/app.component.ts");
+var start_page_component_1 = __webpack_require__("../../../../../src/app/start-page/start-page.component.ts");
+var compass_component_1 = __webpack_require__("../../../../../src/app/compass/compass.component.ts");
+var breakfast_component_1 = __webpack_require__("../../../../../src/app/breakfast/breakfast.component.ts");
+var picking_component_1 = __webpack_require__("../../../../../src/app/picking/picking.component.ts");
+var place_component_1 = __webpack_require__("../../../../../src/app/place/place.component.ts");
 var routes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_4__start_page_start_page_component__["a" /* StartPageComponent */] },
-    { path: 'place', component: __WEBPACK_IMPORTED_MODULE_8__place_place_component__["a" /* PlaceComponent */] }
+    { path: '', component: start_page_component_1.StartPageComponent },
+    { path: 'place', component: place_component_1.PlaceComponent }
 ];
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        core_1.NgModule({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__start_page_start_page_component__["a" /* StartPageComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__compass_compass_component__["a" /* CompassComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__breakfast_breakfast_component__["a" /* BreakfastComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__picking_picking_component__["a" /* PickingComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__place_place_component__["a" /* PlaceComponent */]
+                app_component_1.AppComponent,
+                start_page_component_1.StartPageComponent,
+                compass_component_1.CompassComponent,
+                breakfast_component_1.BreakfastComponent,
+                picking_component_1.PickingComponent,
+                place_component_1.PlaceComponent
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forRoot(routes, { enableTracing: true } // <-- debugging purposes only
+                router_1.RouterModule.forRoot(routes, { enableTracing: true } // <-- debugging purposes only
                 ),
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]
+                platform_browser_1.BrowserModule
             ],
             providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
+            bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
     return AppModule;
 }());
-
+exports.AppModule = AppModule;
 
 
 /***/ }),
@@ -162,11 +154,10 @@ module.exports = module.exports.toString();
 /***/ }),
 
 /***/ "../../../../../src/app/breakfast/breakfast.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BreakfastComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -176,14 +167,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
 var BreakfastComponent = (function () {
     function BreakfastComponent() {
     }
     BreakfastComponent.prototype.ngOnInit = function () {
     };
     BreakfastComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        core_1.Component({
             selector: 'app-breakfast',
             template: __webpack_require__("../../../../../src/app/breakfast/breakfast.component.html"),
             styles: [__webpack_require__("../../../../../src/app/breakfast/breakfast.component.scss")]
@@ -192,7 +184,7 @@ var BreakfastComponent = (function () {
     ], BreakfastComponent);
     return BreakfastComponent;
 }());
-
+exports.BreakfastComponent = BreakfastComponent;
 
 
 /***/ }),
@@ -200,7 +192,7 @@ var BreakfastComponent = (function () {
 /***/ "../../../../../src/app/compass/compass.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p *ngIf=\"showCompassNoSupport == true\">no support for compass</p>\n<div class=\"compass\" *ngIf=\"showCompassNoSupport == false\">\n  <p class=\"black center\">{{distanceToTarget | number: 2}}km</p>\n  <div class=\"compass--circle\">\n    <div class=\"compass--rotate\" [style.transform]=\"compassRotation\">\n      <span class=\"compass--zero\"></span>\n    </div>\n    <span class=\"compass--target\"></span>\n  </div>\n</div>\n"
+module.exports = "<p *ngIf=\"showCompassNoSupport == true\">no support for compass</p>\n\n<div class=\"compass\" *ngIf=\"showCompassNoSupport == false\">\n  <p class=\"black center\">{{distanceToTarget | number: '1.2-2'}}km</p>\n  <div class=\"compass--circle\">\n    <div class=\"compass--rotate\" [style.transform]=\"compassRotation\">\n      <div class=\"compass--rotate\" [style.transform]=\"directionToTarget\">\n        <span class=\"compass--target\"></span>\n      </div>\n    </div>\n    <span class=\"compass--zero\"></span>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -212,7 +204,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".compass {\n  position: relative; }\n  .compass .center {\n    width: 100%;\n    text-align: center; }\n  .compass .compass--circle {\n    background: #ffffff;\n    border-radius: 50%;\n    width: 200px;\n    height: 200px;\n    position: relative; }\n    .compass .compass--circle .compass--rotate {\n      position: absolute;\n      top: 0;\n      left: 0;\n      height: 100%;\n      width: 100%; }\n    .compass .compass--circle .compass--zero {\n      height: 100px;\n      width: 6px;\n      background: red;\n      position: absolute;\n      top: 0;\n      left: 50%;\n      -webkit-transform: translateX(-50%);\n              transform: translateX(-50%);\n      z-index: 1; }\n  .compass .compass--target {\n    height: 100px;\n    width: 4px;\n    background: green;\n    position: absolute;\n    top: 0;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n            transform: translateX(-50%);\n    z-index: 2; }\n", ""]);
+exports.push([module.i, ".compass {\n  position: relative; }\n  .compass .center {\n    width: 100%;\n    text-align: center; }\n  .compass .compass--circle {\n    background: #ffffff;\n    border-radius: 50%;\n    width: 200px;\n    height: 200px;\n    position: relative;\n    box-shadow: 4px 4px 25px black; }\n    .compass .compass--circle .compass--rotate {\n      position: absolute;\n      top: 0;\n      left: 0;\n      height: 100%;\n      width: 100%;\n      z-index: 1; }\n    .compass .compass--circle .compass--zero {\n      height: 100px;\n      width: 4px;\n      background: red;\n      position: absolute;\n      top: 0;\n      left: 50%;\n      -webkit-transform: translateX(-50%);\n              transform: translateX(-50%);\n      z-index: 2;\n      border-bottom-left-radius: 2px;\n      border-bottom-right-radius: 2px; }\n  .compass .compass--target {\n    height: 100px;\n    width: 6px;\n    background: green;\n    position: absolute;\n    top: 0;\n    left: 50%;\n    -webkit-transform: translateX(-50%);\n            transform: translateX(-50%);\n    z-index: 1;\n    border-bottom-left-radius: 3px;\n    border-bottom-right-radius: 3px; }\n", ""]);
 
 // exports
 
@@ -223,11 +215,10 @@ module.exports = module.exports.toString();
 /***/ }),
 
 /***/ "../../../../../src/app/compass/compass.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CompassComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -237,7 +228,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
 var CompassComponent = (function () {
     function CompassComponent() {
         this.showCompassNoSupport = true;
@@ -246,6 +238,7 @@ var CompassComponent = (function () {
         this.compassWatch = undefined;
         this.gpsWatch = undefined;
         this.distanceToTarget = 4.0;
+        this.directionToTarget = 'rotate(0deg)';
     }
     CompassComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -256,8 +249,8 @@ var CompassComponent = (function () {
             _this.showCompassNoSupport = false;
         });
         this.compassWatch = Compass.watch(function (heading) {
-            // this.currentHeading = heading;
-            // this.updateCompassDirection();
+            _this.currentHeading = heading;
+            _this.updateCompassDirection();
         });
         this.gpsWatch = navigator.geolocation.watchPosition(function (position) {
             var pos = [position.coords.latitude, position.coords.longitude];
@@ -269,41 +262,52 @@ var CompassComponent = (function () {
     };
     CompassComponent.prototype.updateDistanceToTarget = function (cur, target) {
         this.distanceToTarget = this.getDistanceFromLatLonInKm(cur[0], cur[1], target[0], target[1]);
-        this.currentHeading = this.getDirection(cur[0], cur[1], target[0], target[1]);
+        this.directionToTarget = 'rotate(' + this.getDirection(cur[0], cur[1], target[0], target[1]) + 'deg)';
         this.updateCompassDirection();
+        console.log(cur, target, this.directionToTarget);
+        // alert(this.getDirection(cur[0], cur[1], target[0], target[1]));
         return;
     };
     CompassComponent.prototype.getDistanceFromLatLonInKm = function (lat1, lon1, lat2, lon2) {
         var R = 6371; // Radius of the earth in km
-        var dLat = this.deg2rad(lat2 - lat1); // deg2rad below
-        var dLon = this.deg2rad(lon2 - lon1);
+        var dLat = this.degToRad(lat2 - lat1); // deg2rad below
+        var dLon = this.degToRad(lon2 - lon1);
         var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-            Math.cos(this.deg2rad(lat1)) * Math.cos(this.deg2rad(lat2)) *
+            Math.cos(this.degToRad(lat1)) * Math.cos(this.degToRad(lat2)) *
                 Math.sin(dLon / 2) * Math.sin(dLon / 2);
         var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         var d = R * c; // Distance in km
         return d;
     };
-    CompassComponent.prototype.deg2rad = function (deg) {
+    CompassComponent.prototype.degToRad = function (deg) {
         return deg * (Math.PI / 180);
     };
-    CompassComponent.prototype.getDirection = function (lat1, lng1, lat2, lng2) {
-        var PI = Math.PI;
-        var dTeta = Math.log(Math.tan((lat2 / 2) + (PI / 4)) / Math.tan((lat1 / 2) + (PI / 4)));
-        var dLon = Math.abs(lng1 - lng2);
-        var teta = Math.atan2(dLon, dTeta);
-        var direction = Math.round(this.radToDeg(teta));
-        return direction;
+    CompassComponent.prototype.getDirection = function (startLat, startLong, endLat, endLong) {
+        startLat = this.degToRad(startLat);
+        startLong = this.degToRad(startLong);
+        endLat = this.degToRad(endLat);
+        endLong = this.degToRad(endLong);
+        var dLong = endLong - startLong;
+        var dPhi = Math.log(Math.tan(endLat / 2.0 + Math.PI / 4.0) / Math.tan(startLat / 2.0 + Math.PI / 4.0));
+        if (Math.abs(dLong) > Math.PI) {
+            if (dLong > 0.0) {
+                dLong = -(2.0 * Math.PI - dLong);
+            }
+            else {
+                dLong = (2.0 * Math.PI + dLong);
+            }
+        }
+        return (this.radToDeg(Math.atan2(dLong, dPhi)) + 360.0) % 360.0;
     };
     CompassComponent.prototype.radToDeg = function (rad) {
         return rad * (180 / Math.PI);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        core_1.Input(),
         __metadata("design:type", Array)
     ], CompassComponent.prototype, "targetLocation", void 0);
     CompassComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        core_1.Component({
             selector: 'app-compass',
             template: __webpack_require__("../../../../../src/app/compass/compass.component.html"),
             styles: [__webpack_require__("../../../../../src/app/compass/compass.component.scss")]
@@ -312,7 +316,7 @@ var CompassComponent = (function () {
     ], CompassComponent);
     return CompassComponent;
 }());
-
+exports.CompassComponent = CompassComponent;
 
 
 /***/ }),
@@ -343,11 +347,10 @@ module.exports = module.exports.toString();
 /***/ }),
 
 /***/ "../../../../../src/app/picking/picking.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PickingComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -357,14 +360,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
 var PickingComponent = (function () {
     function PickingComponent() {
     }
     PickingComponent.prototype.ngOnInit = function () {
     };
     PickingComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        core_1.Component({
             selector: 'app-picking',
             template: __webpack_require__("../../../../../src/app/picking/picking.component.html"),
             styles: [__webpack_require__("../../../../../src/app/picking/picking.component.scss")]
@@ -373,7 +377,7 @@ var PickingComponent = (function () {
     ], PickingComponent);
     return PickingComponent;
 }());
-
+exports.PickingComponent = PickingComponent;
 
 
 /***/ }),
@@ -381,7 +385,7 @@ var PickingComponent = (function () {
 /***/ "../../../../../src/app/place/place.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app\">\n  <h2>{{placeName}}</h2>\n  <div class=\"compass container\">\n    <app-compass [targetLocation]=\"locations[0]\"></app-compass>\n  </div>\n</div>"
+module.exports = "<div class=\"app\" [style.backgroundColor]=\"currentLocation['bg']\">\n  <h2>{{currentLocation['name']}}</h2>\n  <div class=\"compass container\">\n    <app-compass [targetLocation]=\"currentLocation['loc']\"></app-compass>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -404,11 +408,10 @@ module.exports = module.exports.toString();
 /***/ }),
 
 /***/ "../../../../../src/app/place/place.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlaceComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -418,17 +421,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
 var PlaceComponent = (function () {
     function PlaceComponent() {
         this.locations = [
-            [-34.7960508, 138.4884457]
+            {
+                loc: [-34.812006, 138.491293],
+                name: 'Breakfast',
+                bg: '#A316BD'
+            },
+            {
+                loc: [],
+                name: 'Cherry Picking',
+                bg: '#BC1B32'
+            },
+            {
+                loc: [],
+                name: 'Picnic',
+                bg: '#0FD85D'
+            },
+            {
+                loc: [],
+                name: 'Bowling',
+                bg: '#FF4B32'
+            }
         ];
-        this.placeName = 'placeName';
+        this.currentLocation = this.locations[0];
     }
     PlaceComponent.prototype.ngOnInit = function () { };
     PlaceComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        core_1.Component({
             selector: 'app-place',
             template: __webpack_require__("../../../../../src/app/place/place.component.html"),
             styles: [__webpack_require__("../../../../../src/app/place/place.component.scss")]
@@ -437,7 +460,7 @@ var PlaceComponent = (function () {
     ], PlaceComponent);
     return PlaceComponent;
 }());
-
+exports.PlaceComponent = PlaceComponent;
 
 
 /***/ }),
@@ -468,11 +491,10 @@ module.exports = module.exports.toString();
 /***/ }),
 
 /***/ "../../../../../src/app/start-page/start-page.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StartPageComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -482,14 +504,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
 var StartPageComponent = (function () {
     function StartPageComponent() {
     }
     StartPageComponent.prototype.ngOnInit = function () {
     };
     StartPageComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        core_1.Component({
             selector: 'app-start-page',
             template: __webpack_require__("../../../../../src/app/start-page/start-page.component.html"),
             styles: [__webpack_require__("../../../../../src/app/start-page/start-page.component.scss")]
@@ -498,21 +521,22 @@ var StartPageComponent = (function () {
     ], StartPageComponent);
     return StartPageComponent;
 }());
-
+exports.StartPageComponent = StartPageComponent;
 
 
 /***/ }),
 
 /***/ "../../../../../src/environments/environment.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-var environment = {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.environment = {
     production: false
 };
 
@@ -520,22 +544,19 @@ var environment = {
 /***/ }),
 
 /***/ "../../../../../src/main.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/esm5/platform-browser-dynamic.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 
-
-
-
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* enableProdMode */])();
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__("../../../core/esm5/core.js");
+var platform_browser_dynamic_1 = __webpack_require__("../../../platform-browser-dynamic/esm5/platform-browser-dynamic.js");
+var app_module_1 = __webpack_require__("../../../../../src/app/app.module.ts");
+var environment_1 = __webpack_require__("../../../../../src/environments/environment.ts");
+if (environment_1.environment.production) {
+    core_1.enableProdMode();
 }
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
+platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule)
     .catch(function (err) { return console.log(err); });
 
 

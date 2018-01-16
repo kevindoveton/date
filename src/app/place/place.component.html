@@ -1,6 +1,6 @@
-<div class="app">
-  <h2>{{placeName}}</h2>
+<div class="app" [style.backgroundColor]="currentLocation['bg']">
+  <h2>{{currentLocation['name']}}</h2>
   <div class="compass container">
-    <app-compass [targetLocation]="currentLocation"></app-compass>
+    <app-compass [targetLocation]="currentLocation['loc']"></app-compass>
   </div>
 </div>

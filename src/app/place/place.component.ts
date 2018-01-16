@@ -8,15 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class PlaceComponent implements OnInit {
   locations = [
     {
-      loc: [-34.7960508, 138.4884457],
-      name: 'Home'
+      loc: [-34.812006, 138.491293],
+      name: 'Breakfast',
+      bg: '#A316BD'
     },
     {
       loc: [],
-      name: ''
+      name: 'Cherry Picking',
+      bg: '#BC1B32'
+    },
+    {
+      loc: [],
+      name: 'Picnic',
+      bg: '#0FD85D'
+    },
+    {
+      loc: [],
+      name: 'Bowling',
+      bg: '#FF4B32'
     }
   ];
-  placeName = 'placeName';
+  currentLocation = this.locations[0];
 
   constructor() { }
 

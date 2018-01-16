@@ -16,6 +16,7 @@ $compassTargetColor: green;
     width: $compassSize;
     height: $compassSize;
     position: relative;
+    box-shadow: 4px 4px 25px black;
   
     .compass--rotate {
       position: absolute;
@@ -23,30 +24,35 @@ $compassTargetColor: green;
       left: 0;
       height: 100%;
       width: 100%;
+      z-index: 1;
     }
 
     .compass--zero {
       height: $compassSize / 2;
-      width: 6px;
+      width: 4px;
       background: $compassZeroColor;
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 1;
+      z-index: 2;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
     }
   }
 
 
   .compass--target {
     height: $compassSize / 2;
-    width: 4px;
+    width: 6px;
     background: $compassTargetColor;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 1;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
 
 }
