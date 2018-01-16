@@ -32,7 +32,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".app {\n  background-color: #2B77D6;\n  height: 100%;\n  width: 100%;\n  position: relative;\n  font-family: 'Bitter', Arial, serif;\n  color: white;\n  font-weight: 100; }\n  .app .center.heading {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%); }\n    .app .center.heading h1 {\n      font-size: 50px;\n      font-weight: 100;\n      text-align: center;\n      margin: 0;\n      padding-bottom: 8px; }\n    .app .center.heading button {\n      margin: 0;\n      padding: 8px 48px;\n      background: white;\n      border: 0; }\n  .app .dt {\n    position: absolute;\n    bottom: 20px;\n    left: 20px; }\n    .app .dt h2,\n    .app .dt h3 {\n      margin: 0;\n      font-weight: 100; }\n    .app .dt h2 {\n      font-size: 30px;\n      letter-spacing: 2px; }\n    .app .dt h3 {\n      font-size: 13px; }\n", ""]);
+exports.push([module.i, ".app {\n  background-color: #2B77D6;\n  height: 100%;\n  width: 100%;\n  position: relative;\n  font-family: 'Bitter', Arial, serif;\n  color: white;\n  font-weight: 100; }\n  .app .center.heading {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%); }\n    .app .center.heading h1 {\n      font-size: 50px;\n      font-weight: 100;\n      text-align: center;\n      margin: 0;\n      padding-bottom: 8px;\n      -webkit-animation-name: animateIn;\n              animation-name: animateIn;\n      -webkit-animation-duration: 1s;\n              animation-duration: 1s;\n      -webkit-animation-delay: 1s;\n              animation-delay: 1s; }\n    .app .center.heading button {\n      margin: 0;\n      padding: 8px 48px;\n      background: white;\n      border: 0; }\n  .app .dt {\n    position: absolute;\n    bottom: 20px;\n    left: 20px; }\n    .app .dt h2,\n    .app .dt h3 {\n      margin: 0;\n      font-weight: 100; }\n    .app .dt h2 {\n      font-size: 30px;\n      letter-spacing: 2px; }\n    .app .dt h3 {\n      font-size: 13px; }\n\n@-webkit-keyframes animateIn {\n  0% {\n    top: 100%;\n    opacity: 0; }\n  100% {\n    top: 0;\n    opacity: 1; } }\n\n@keyframes animateIn {\n  0% {\n    top: 100%;\n    opacity: 0; }\n  100% {\n    top: 0;\n    opacity: 1; } }\n", ""]);
 
 // exports
 
@@ -383,7 +383,7 @@ exports.PickingComponent = PickingComponent;
 /***/ "../../../../../src/app/place/place.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app\" [style.backgroundColor]=\"currentLocation['bg']\">\n  <h2>{{currentLocation['name']}}</h2>\n  <div class=\"compass container\">\n    <app-compass [targetLocation]=\"currentLocation['loc']\"></app-compass>\n  </div>\n</div>"
+module.exports = "<div class=\"app\" [style.backgroundColor]=\"currentLocation['bg']\">\n  <h2>{{currentLocation['name']}}</h2>\n  <button (click)=\"nextLocation()\">Next</button>\n  <div class=\"compass container\">\n    <app-compass [targetLocation]=\"currentLocation['loc']\"></app-compass>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -421,33 +421,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__("../../../core/esm5/core.js");
+var compass_component_1 = __webpack_require__("../../../../../src/app/compass/compass.component.ts");
 var PlaceComponent = (function () {
     function PlaceComponent() {
         this.locations = [
             {
-                loc: [-34.812006, 138.491293],
+                loc: [-35.021062, 138.622906],
                 name: 'Breakfast',
                 bg: '#A316BD'
             },
             {
-                loc: [],
+                loc: [-34.935054, 138.738184],
                 name: 'Cherry Picking',
                 bg: '#BC1B32'
             },
             {
-                loc: [],
+                loc: [-34.975465, 138.710323],
                 name: 'Picnic',
                 bg: '#0FD85D'
             },
             {
-                loc: [],
+                loc: [-35.017309, 138.514237],
+                name: 'Beach',
+                bg: 'yellow'
+            },
+            {
+                loc: [-34.966802, 138.591332],
                 name: 'Bowling',
                 bg: '#FF4B32'
             }
         ];
-        this.currentLocation = this.locations[0];
+        this.currentLocationIndex = 0;
+        this.currentLocation = this.locations[this.currentLocationIndex];
     }
     PlaceComponent.prototype.ngOnInit = function () { };
+    PlaceComponent.prototype.nextLocation = function () {
+        this.currentLocationIndex++;
+        this.currentLocation = this.locations[this.currentLocationIndex];
+    };
+    __decorate([
+        core_1.ViewChild(compass_component_1.CompassComponent),
+        __metadata("design:type", compass_component_1.CompassComponent)
+    ], PlaceComponent.prototype, "compass", void 0);
     PlaceComponent = __decorate([
         core_1.Component({
             selector: 'app-place',
@@ -466,7 +481,7 @@ exports.PlaceComponent = PlaceComponent;
 /***/ "../../../../../src/app/start-page/start-page.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app\">\n  <div class=\"center heading\">\n    <h1>Arr,</h1>\n    <button routerLink=\"place\">Continue</button>\n  </div>\n  <div class=\"dt\">\n    <h2>8am</h2>\n    <h3>20.01.2018</h3>\n  </div>\n</div> "
+module.exports = "<div class=\"app\">\n  <div class=\"center heading\">\n    <div class=\"heading\">\n      <h1>Arr,</h1>\n      <!-- <h2>Today... we go on a treasure hunt</h2> -->\n    </div>\n    <div class=\"button\">\n      <button routerLink=\"place\">Continue</button>\n    </div>\n  </div>\n  <div class=\"dt\">\n    <h2>8am</h2>\n    <h3>20.01.2018</h3>\n  </div>\n</div> "
 
 /***/ }),
 
@@ -478,7 +493,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".app .center.heading {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%); }\n  .app .center.heading h1 {\n    font-size: 50px;\n    font-weight: 100;\n    text-align: center;\n    margin: 0;\n    padding-bottom: 8px; }\n  .app .center.heading button {\n    margin: 0;\n    padding: 8px 48px;\n    background: white;\n    border: 0; }\n\n.app .dt {\n  position: absolute;\n  bottom: 20px;\n  left: 20px; }\n  .app .dt h2,\n  .app .dt h3 {\n    margin: 0;\n    font-weight: 100; }\n  .app .dt h2 {\n    font-size: 30px;\n    letter-spacing: 2px; }\n  .app .dt h3 {\n    font-size: 13px; }\n", ""]);
+exports.push([module.i, ".app {\n  background-color: #2B77D6;\n  height: 100%;\n  width: 100%;\n  position: relative;\n  font-family: 'Bitter', Arial, serif;\n  color: white;\n  font-weight: 100; }\n  .app .center.heading {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    width: 150px;\n    height: 60px; }\n    .app .center.heading .heading {\n      position: absolute;\n      height: 100%;\n      width: 100%; }\n    .app .center.heading .button {\n      position: absolute;\n      top: 60px;\n      left: 0; }\n    .app .center.heading h1 {\n      position: absolute;\n      top: 0;\n      left: 0;\n      width: 100%;\n      font-size: 50px;\n      font-weight: 100;\n      text-align: center;\n      margin: 0;\n      padding-bottom: 8px;\n      -webkit-animation-name: animateIn;\n              animation-name: animateIn;\n      -webkit-animation-duration: 1s;\n              animation-duration: 1s;\n      -webkit-animation-delay: 1s;\n              animation-delay: 1s;\n      -webkit-animation-fill-mode: forwards;\n              animation-fill-mode: forwards;\n      opacity: 0; }\n    .app .center.heading button {\n      margin: 0;\n      padding: 8px 48px;\n      background: white;\n      border: 0;\n      opacity: 0;\n      -webkit-animation-name: fadeIn;\n              animation-name: fadeIn;\n      -webkit-animation-delay: 5s;\n              animation-delay: 5s;\n      -webkit-animation-duration: 1s;\n              animation-duration: 1s;\n      -webkit-animation-fill-mode: forwards;\n              animation-fill-mode: forwards; }\n  .app .dt {\n    display: none;\n    position: absolute;\n    bottom: 20px;\n    left: 20px; }\n    .app .dt h2,\n    .app .dt h3 {\n      margin: 0;\n      font-weight: 100; }\n    .app .dt h2 {\n      font-size: 30px;\n      letter-spacing: 2px; }\n    .app .dt h3 {\n      font-size: 13px; }\n\n@-webkit-keyframes animateIn {\n  0% {\n    top: 100%;\n    opacity: 0; }\n  100% {\n    top: 0;\n    opacity: 1; } }\n\n@keyframes animateIn {\n  0% {\n    top: 100%;\n    opacity: 0; }\n  100% {\n    top: 0;\n    opacity: 1; } }\n\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes fadeIn {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n", ""]);
 
 // exports
 

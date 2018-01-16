@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ViewChild } from '@angular/core/src/metadata/di';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CompassComponent } from '../compass/compass.component';
 
 @Component({
@@ -13,22 +12,27 @@ export class PlaceComponent implements OnInit {
 
   locations = [
     {
-      loc: [-34.812006, 138.491293],
+      loc: [-35.021062, 138.622906],
       name: 'Breakfast',
       bg: '#A316BD'
     },
     {
-      loc: [],
+      loc: [-34.935054, 138.738184],
       name: 'Cherry Picking',
       bg: '#BC1B32'
     },
     {
-      loc: [],
+      loc: [-34.975465, 138.710323],
       name: 'Picnic',
       bg: '#0FD85D'
     },
     {
-      loc: [],
+      loc: [-35.017309, 138.514237],
+      name: 'Beach',
+      bg: 'yellow'
+    },
+    {
+      loc: [-34.966802, 138.591332],
       name: 'Bowling',
       bg: '#FF4B32'
     }

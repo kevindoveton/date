@@ -20,6 +20,9 @@ $firstBlue: #2B77D6;
       text-align: center;
       margin: 0;
       padding-bottom: 8px;
+      animation-name: animateIn;
+      animation-duration: 1s;
+      animation-delay: 1s;
     }
 
     button {
@@ -51,4 +54,9 @@ $firstBlue: #2B77D6;
       font-size: 13px;
     }
   }
+}
+
+@keyframes animateIn {
+  0% { top: 100%; opacity: 0; }
+  100% { top: 0; opacity: 1; }
 }

@@ -1,16 +1,95 @@
+// .app {
+//   .center.heading {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+
+//     h1 {
+//       font-size: 50px;
+//       font-weight: 100;
+//       text-align: center;
+//       margin: 0;
+//       padding-bottom: 8px;
+  
+//     }
+
+//     button {
+//       margin: 0;
+//       padding: 8px 48px;
+//       background: white;
+//       border: 0;
+//     }
+
+//   }
+
+//   .dt {
+//     position: absolute;
+//     bottom: 20px;
+//     left: 20px;
+
+//     h2,
+//     h3 {
+//       margin: 0;
+//       font-weight: 100;
+//     }
+
+//     h2 {
+//       font-size: 30px;
+//       letter-spacing: 2px;
+//     }
+
+//     h3 {
+//       font-size: 13px;
+//     }
+//   }
+// }
+
+$firstBlue: #2B77D6;
+
 .app {
+  background-color: $firstBlue;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: 'Bitter', Arial, serif;
+  color: white;
+  font-weight: 100;
   .center.heading {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 150px;
+    height: 60px;
+
+    .heading {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+
+    .button {
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
 
     h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       font-size: 50px;
       font-weight: 100;
       text-align: center;
       margin: 0;
       padding-bottom: 8px;
+      animation-name: animateIn;
+      animation-duration: 1s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      opacity: 0;
     }
 
     button {
@@ -18,11 +97,17 @@
       padding: 8px 48px;
       background: white;
       border: 0;
+      opacity: 0;
+      animation-name: fadeIn;
+      animation-delay: 5s;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
     }
 
   }
 
   .dt {
+    display: none;
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -42,4 +127,14 @@
       font-size: 13px;
     }
   }
+}
+
+@keyframes animateIn {
+  0% { top: 100%; opacity: 0; }
+  100% { top: 0; opacity: 1; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

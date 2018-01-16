@@ -1,6 +1,6 @@
 <div class="app" [style.backgroundColor]="currentLocation['bg']">
   <h2>{{currentLocation['name']}}</h2>
-  <button (click)="next()">Next</button>
+  <button (click)="nextLocation()">Next</button>
   <div class="compass container">
     <app-compass [targetLocation]="currentLocation['loc']"></app-compass>
   </div>
