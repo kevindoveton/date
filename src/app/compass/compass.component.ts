@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 
 @Component({
@@ -9,6 +9,7 @@ import { DecimalPipe } from '@angular/common';
 
 export class CompassComponent implements OnInit {
   @Input() targetLocation: Number[];
+  @Output() reachedTarget = new EventEmitter();
 
   showCompassNoSupport = true;
   currentHeading = 0;
@@ -17,8 +18,10 @@ export class CompassComponent implements OnInit {
   gpsWatch = undefined;
   distanceToTarget = 4.0;
   directionToTarget = 'rotate(0deg)';
+  emittedTargetReached = false;
 
   constructor() { }
+
 
   ngOnInit() {
     Compass.noSupport(() => {
@@ -40,6 +43,12 @@ export class CompassComponent implements OnInit {
     });
   }
 
+  reset() {
+    this.directionToTarget = 'rotate(0deg)';
+    this.distanceToTarget = 0;
+    this.emittedTargetReached = false;
+  }
+
   updateCompassDirection() {
     this.compassRotation = 'rotate(-' + this.currentHeading + 'deg)';
   }
@@ -48,6 +57,11 @@ export class CompassComponent implements OnInit {
     this.distanceToTarget = this.getDistanceFromLatLonInKm(cur[0], cur[1], target[0], target[1]);
     this.directionToTarget = 'rotate(' + this.getDirection(cur[0], cur[1], target[0], target[1]) + 'deg)';
     this.updateCompassDirection();
+
+    if (!this.emittedTargetReached && this.distanceToTarget < 0.2) {
+        this.reachedTarget.emit(this.distanceToTarget);
+        this.emittedTargetReached = true;
+    }
     return;
   }
 

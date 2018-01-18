@@ -5,9 +5,8 @@ $firstBlue: #2B77D6;
   height: 100%;
   width: 100%;
   position: relative;
-  font-family: 'Bitter', Arial, serif;
   color: white;
-  font-weight: 100;
+  
   .center.heading {
     position: absolute;
     top: 50%;
@@ -24,8 +23,10 @@ $firstBlue: #2B77D6;
 
     .button {
       position: absolute;
-      top: 60px;
-      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // transform: translate3d(-50%, -50%, 0);
     }
 
     h1 {
@@ -39,20 +40,16 @@ $firstBlue: #2B77D6;
       margin: 0;
       padding-bottom: 8px;
       animation-name: animateIn;
-      animation-duration: 1s;
+      animation-duration: 5s;
       animation-delay: 1s;
       animation-fill-mode: forwards;
       opacity: 0;
     }
 
     button {
-      margin: 0;
-      padding: 8px 48px;
-      background: white;
-      border: 0;
       opacity: 0;
       animation-name: fadeIn;
-      animation-delay: 5s;
+      animation-delay: 6s;
       animation-duration: 1s;
       animation-fill-mode: forwards;
     }
@@ -84,7 +81,9 @@ $firstBlue: #2B77D6;
 
 @keyframes animateIn {
   0% { top: 100%; opacity: 0; }
-  100% { top: 0; opacity: 1; }
+  20% { top: 0; opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @keyframes fadeIn {

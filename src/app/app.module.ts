@@ -10,6 +10,7 @@ import { CompassComponent } from './compass/compass.component';
 import { BreakfastComponent } from './breakfast/breakfast.component';
 import { PickingComponent } from './picking/picking.component';
 import { PlaceComponent } from './place/place.component';
+import { PyroComponent } from './pyro/pyro.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,9 @@ const routes: Routes = [
 
     PickingComponent,
 
-    PlaceComponent
+    PlaceComponent,
+
+    PyroComponent
   ],
   imports: [
     RouterModule.forRoot(

@@ -12,7 +12,8 @@ export class PlaceComponent implements OnInit {
 
   locations = [
     {
-      loc: [-35.021062, 138.622906],
+      // loc: [-35.021062, 138.622906], // actual
+      loc: [-34.796632, 138.490241], // test
       name: 'Breakfast',
       bg: '#A316BD'
     },
@@ -39,14 +40,27 @@ export class PlaceComponent implements OnInit {
   ];
   currentLocationIndex = 0;
   currentLocation = this.locations[this.currentLocationIndex];
+  currentLocationReached = true;
+  showPyro = false;
 
   constructor() { }
 
   ngOnInit() { }
 
   nextLocation() {
+    this.compass.reset();
+    this.currentLocationReached = false;
     this.currentLocationIndex++;
     this.currentLocation = this.locations[this.currentLocationIndex];
+    this.showPyro = false;
+  }
+
+  reachedTarget(event) {
+    this.currentLocationReached = true;
+    this.showPyro = true;
+    setTimeout(() => {
+      this.showPyro = false;
+    }, 7000);
   }
 
 }

@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "html,\nbody {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  overflow: hidden; }\n\n.app {\n  background-color: #2B77D6;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  font-family: 'Bitter', Arial, serif;\n  color: white;\n  font-weight: 100; }\n\n.black {\n  color: black; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'Nexa';\n  src: url(\"/assets/Nexa-Book.otf\") format(\"opentype\");\n  font-weight: 300; }\n\n@font-face {\n  font-family: 'Nexa';\n  src: url(\"/assets/Nexa-Regular.otf\") format(\"opentype\");\n  font-weight: 500; }\n\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n  font-family: Nexa;\n  font-weight: 500;\n  color: white; }\n\n.app {\n  background-color: #2B77D6;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  top: 0;\n  left: 0; }\n\n.black {\n  color: black; }\n\nbutton {\n  font-size: 24px;\n  padding: 8px 60px;\n  border: 3px solid white;\n  background: transparent;\n  color: white; }\n\nbutton,\nh1, h2, h3, h4, h5, h6,\np {\n  font-family: Nexa;\n  font-weight: 500;\n  margin: 0;\n  padding: 0; }\n", ""]);
 
 // exports
 
