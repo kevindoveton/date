@@ -12,8 +12,8 @@ export class PlaceComponent implements OnInit {
 
   locations = [
     {
-      // loc: [-35.021062, 138.622906], // actual
-      loc: [-34.796632, 138.490241], // test
+      loc: [-35.021062, 138.622906], // actual
+      // loc: [-34.796632, 138.490241], // test
       name: 'Breakfast',
       bg: '#A316BD'
     },
@@ -30,7 +30,7 @@ export class PlaceComponent implements OnInit {
     {
       loc: [-35.017309, 138.514237],
       name: 'Beach',
-      bg: 'yellow'
+      bg: '#00bcd4'
     },
     {
       loc: [-34.966802, 138.591332],
@@ -40,12 +40,21 @@ export class PlaceComponent implements OnInit {
   ];
   currentLocationIndex = 0;
   currentLocation = this.locations[this.currentLocationIndex];
-  currentLocationReached = true;
+  currentLocationReached = false;
   showPyro = false;
+  fadeToBlack = false;
 
-  constructor() { }
+  constructor() {
 
-  ngOnInit() { }
+   }
+
+  ngOnInit() {
+    this.currentLocationIndex = parseInt(localStorage.getItem('position'), 10);
+    this.currentLocation = this.locations[this.currentLocationIndex];
+    if (this.currentLocationIndex >= this.locations.length) {
+      localStorage.removeItem('position');
+    }
+  }
 
   nextLocation() {
     this.compass.reset();
@@ -53,6 +62,12 @@ export class PlaceComponent implements OnInit {
     this.currentLocationIndex++;
     this.currentLocation = this.locations[this.currentLocationIndex];
     this.showPyro = false;
+    localStorage.setItem('position', this.currentLocationIndex.toString(10));
+    if (this.currentLocationIndex >= this.locations.length) {
+      this.showPyro = true;
+      this.fadeToBlack = true;
+      localStorage.removeItem('position');
+    }
   }
 
   reachedTarget(event) {

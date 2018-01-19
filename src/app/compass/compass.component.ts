@@ -58,7 +58,7 @@ export class CompassComponent implements OnInit {
     this.directionToTarget = 'rotate(' + this.getDirection(cur[0], cur[1], target[0], target[1]) + 'deg)';
     this.updateCompassDirection();
 
-    if (!this.emittedTargetReached && this.distanceToTarget < 0.2) {
+    if (!this.emittedTargetReached && this.distanceToTarget < 0.05) {
         this.reachedTarget.emit(this.distanceToTarget);
         this.emittedTargetReached = true;
     }

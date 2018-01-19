@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-start-page',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./start-page.component.scss']
 })
 export class StartPageComponent implements OnInit {
+  start = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    if ((window.navigator as any).standalone) {
+      this.start = true;
+
+      if (localStorage.getItem('position') == null) {
+        localStorage.setItem('position', '0');
+      } else {
+        this.router.navigateByUrl('/place');
+      }
+
+    }
   }
 
 }

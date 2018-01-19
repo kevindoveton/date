@@ -6,19 +6,23 @@ $firstBlue: #2B77D6;
   width: 100%;
   position: relative;
   color: white;
-  
+
   .center.heading {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150px;
+    width: 320px;
     height: 60px;
 
     .heading {
       position: absolute;
       height: 100%;
       width: 100%;
+      text-align: center;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
     }
 
     .button {
@@ -26,7 +30,11 @@ $firstBlue: #2B77D6;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      // transform: translate3d(-50%, -50%, 0);
+      width: 300px;
+      button {
+        padding: 8px;
+        width: 100%;
+      }
     }
 
     h1 {
@@ -42,17 +50,38 @@ $firstBlue: #2B77D6;
       animation-name: animateIn;
       animation-duration: 5s;
       animation-delay: 1s;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
       opacity: 0;
     }
 
     button {
       opacity: 0;
       animation-name: fadeIn;
-      animation-delay: 6s;
+      animation-delay: 15s;
       animation-duration: 1s;
-      animation-fill-mode: forwards;
+      animation-fill-mode: both;
     }
+
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      animation-name: fade;
+      animation-duration: 4s;
+      animation-fill-mode: both;
+    }
+
+    h2:nth-of-type(1) {
+      animation-delay: 6s;
+    }
+
+    h2:nth-of-type(2) {
+      animation-delay: 10s;
+    }
+
+    
 
   }
 
@@ -89,4 +118,11 @@ $firstBlue: #2B77D6;
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  20% { opacity: 1 }
+  80% { opacity: 1 }
+  100% { opacity: 0 }
 }

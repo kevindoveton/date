@@ -1,11 +1,10 @@
-<div class="app" [style.backgroundColor]="currentLocation['bg']">
+<div class="app" [style.backgroundColor]="fadeToBlack == false ? currentLocation['bg'] : '#000000'">
   <div class="pyro container" *ngIf="showPyro">
     <app-pyro></app-pyro>
   </div>
-  <h2>{{currentLocation['name']}}</h2>
+  <h2 *ngIf="!fadeToBlack">{{currentLocation['name']}}</h2>
   <button (click)="nextLocation()" *ngIf="currentLocationReached">Next</button>
-  <div class="compass container">
+  <div class="compass container" *ngIf="!fadeToBlack">
     <app-compass [targetLocation]="currentLocation['loc']" (reachedTarget)="reachedTarget($event)"></app-compass>
   </div>
 </div>
-

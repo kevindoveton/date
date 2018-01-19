@@ -10,6 +10,12 @@ $compassTargetColor: green;
     text-align: center;
   }
 
+  .distance {
+    margin-top: 16px;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
   .compass--circle {
     background: $white;
     border-radius: 50%;
