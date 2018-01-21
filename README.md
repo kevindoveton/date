@@ -1,4 +1,6 @@
-# DateActual
+Went on a date, made an app for it..
+
+# Date
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 

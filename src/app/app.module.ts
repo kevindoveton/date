@@ -7,8 +7,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { StartPageComponent } from './start-page/start-page.component';
 import { CompassComponent } from './compass/compass.component';
-import { BreakfastComponent } from './breakfast/breakfast.component';
-import { PickingComponent } from './picking/picking.component';
+
+
 import { PlaceComponent } from './place/place.component';
 import { PyroComponent } from './pyro/pyro.component';
 
@@ -25,10 +25,6 @@ const routes: Routes = [
     StartPageComponent,
 
     CompassComponent,
-
-    BreakfastComponent,
-
-    PickingComponent,
 
     PlaceComponent,
 

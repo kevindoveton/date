@@ -13,7 +13,6 @@ export class PlaceComponent implements OnInit {
   locations = [
     {
       loc: [-35.021062, 138.622906], // actual
-      // loc: [-34.796632, 138.490241], // test
       name: 'Breakfast',
       bg: '#A316BD'
     },
