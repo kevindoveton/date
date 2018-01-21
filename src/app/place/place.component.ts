@@ -18,23 +18,23 @@ export class PlaceComponent implements OnInit {
       bg: '#A316BD'
     },
     {
-      loc: [-34.935054, 138.738184],
-      name: 'Cherry Picking',
+      loc: [-35.038078, 138.817887],
+      name: 'Treasure One',
       bg: '#BC1B32'
     },
     {
-      loc: [-34.975465, 138.710323],
-      name: 'Picnic',
+      loc: [-35.008184, 138.724905],
+      name: 'Lunch',
       bg: '#0FD85D'
     },
     {
       loc: [-35.017309, 138.514237],
-      name: 'Beach',
+      name: 'Treasure Two',
       bg: '#00bcd4'
     },
     {
       loc: [-34.966802, 138.591332],
-      name: 'Bowling',
+      name: 'Treasure Three',
       bg: '#FF4B32'
     }
   ];
